@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextGen WebWorks Landing Page</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon.webp"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html"><img src="./assets/logo_img.png" alt="" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Section (Landing Page) -->
+    <section id="home" class="landing-section">
+      <div class="content">
+        <h1>Welcome To,</h1>
+        <h1 class="NextGenWebWorksTitle">NextGen WebWorks</h1>
+        <p>Your gateway to a future in Web Development</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          At NextGen WebWorks, we specialize in empowering the next generation
+          of web developers with cutting-edge technologies and practical skills.
+          Our mission is to bridge the gap between education and real-world
+          application.
+        </p>
+        <div class="about-content">
+          <div class="about-item">
+            <img
+              src="./images/Vision_img.avif"
+              alt="Our Vision"
+              class="about-image"
+            />
+            <h3>Our Vision</h3>
+            <p>
+              We aim to become a global leader in web development education,
+              creating professionals who can innovate and excel in any
+              environment.
+            </p>
+          </div>
+          <div class="about-item">
+            <img
+              src="./images/Mission_img.webp"
+              alt="Our Mission"
+              class="about-image"
+            />
+            <h3>Our Mission</h3>
+            <p>
+              We are committed to providing the highest quality of web
+              development training, combining theory and hands-on experience to
+              prepare students for successful careers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>
+          We offer a range of services to meet the needs of web developers,
+          businesses, and aspiring professionals:
+        </p>
+        <div class="services-content">
+          <div class="service-item">
+            <img
+              src="./images/web_development_img.jpg"
+              alt="Web Development"
+              class="service-icon"
+              width="1024"
+              height="1024"
+            />
+            <h3>Web Development</h3>
+            <p>
+              From static websites to complex web applications, we deliver
+              responsive and dynamic websites that meet industry standards.
+            </p>
+          </div>
+          <div class="service-item">
+            <img
+              src="./images/Mobile_App_Development.jpg"
+              alt="Mobile Apps"
+              class="service-icon"
+            />
+            <h3>Mobile App Development</h3>
+            <p>
+              We develop intuitive mobile applications that offer seamless user
+              experiences on both Android and iOS platforms.
+            </p>
+          </div>
+          <div class="service-item">
+            <img
+              src="./images/Consulting_img.jpg"
+              alt="Consulting"
+              class="service-icon"
+            />
+            <h3>Consulting</h3>
+            <p>
+              We offer expert advice to help businesses optimize their web
+              presence and stay ahead of the competition in digital
+              transformation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          Get in touch with us to start your journey in web development. We're
+          here to answer your questions!
+        </p>
+        <form action="#" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>NextGen WebWorks</h3>
+            <p>Empowering the next generation of web developers.</p>
+            <p>&copy; 2025 NextGen WebWorks. All Rights Reserved.</p>
+          </div>
+          <div class="footer-right">
+            <h4>Follow Us</h4>
+            <ul class="social-media">
+              <li>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+              </li>
+              <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+              <li>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
