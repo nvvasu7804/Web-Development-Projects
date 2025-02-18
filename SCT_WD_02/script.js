@@ -23,6 +23,7 @@ const resetButton = document.getElementById("reset");
 
 const lapsList = document.getElementById("laps");
 
+// Function to start/stop the stopwatch
 startStopButton.addEventListener("click", () => {
   if (!running) {
     running = true;
@@ -37,6 +38,7 @@ startStopButton.addEventListener("click", () => {
   }
 });
 
+// Function to update time
 function updateTime() {
   milliseconds += 10;
   if (milliseconds >= 1000) {
@@ -61,6 +63,7 @@ function updateTime() {
   displayMilliseconds.textContent = formatMilliseconds(milliseconds);
 }
 
+// Function to format numbers
 function formatTime(time) {
   return time < 10 ? `0${time}` : time;
 }
@@ -69,6 +72,7 @@ function formatMilliseconds(time) {
   return time < 100 ? `0${time}` : time;
 }
 
+// Function to record lap times
 lapButton.addEventListener("click", () => {
   if (running) {
     const lapTime = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(
@@ -80,6 +84,7 @@ lapButton.addEventListener("click", () => {
   }
 });
 
+// Function to reset stopwatch
 resetButton.addEventListener("click", () => {
   running = false;
   clearInterval(timer);
