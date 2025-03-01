@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, hsl(0, 100%, 68%), hsl(20, 100%, 70%));
+  color: white;
+  text-align: center;
+}
+
+.quiz-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 40px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+button {
+  min-width: 80px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid transparent;
+}
+
+.option-btn:hover {
+  background-color: hsl(20, 100%, 70%);
+  color: white;
+  border: 2px solid white;
+}
+
+.selected {
+  background-color: hsl(0, 100%, 68%);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#next-btn,
+#submit-btn,
+#restart-btn {
+  background-color: blue;
+  color: white;
+}
+
+#next-btn:hover,
+#submit-btn:hover,
+#restart-btn:hover {
+  background-color: darkblue;
+}
+
+#result-container {
+  margin-top: 20px;
+}
