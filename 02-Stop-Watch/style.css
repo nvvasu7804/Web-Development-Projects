@@ -1,74 +1,90 @@
+/* Reset default margin and padding for all elements, and set the box-sizing model */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; /* Apply Poppins font throughout the webpage */
 }
 
+/* Center the body content and set a gradient background */
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff5a5a, #ff9966);
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(
+    135deg,
+    #ff5a5a,
+    #ff9966
+  ); /* Diagonal gradient background */
   color: white;
-  text-align: center;
+  text-align: center; /* Align text to center */
 }
 
+/* Styling for the stopwatch container */
 .container {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  padding: 30px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
 }
 
+/* Main heading styles */
 h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2rem; /* Large font size */
+  margin-bottom: 15px; /* Space below the heading */
 }
 
+/* Stopwatch display styling */
 .stopwatch {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Larger font for better visibility */
   font-weight: bold;
   margin-bottom: 15px;
 }
 
+/* Styling for buttons container */
 .buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px 20px; /* Padding inside buttons */
+  font-size: 1rem; /* Readable font size */
+  margin: 5px; /* Space between buttons */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded button edges */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+/* Start/Stop button - Green when stopped, Red when running */
 #startStop {
-  background-color: rgb(22, 255, 22);
+  background-color: rgb(22, 255, 22); /* Green when stopped */
   color: white;
 }
 
+/* Change Start/Stop button to red when active (running state) */
 #startStop.running {
-  background-color: rgb(255, 22, 22);
+  background-color: rgb(255, 22, 22); /* Red when running */
 }
 
+/* Lap button - Blue color */
 #lap {
   background-color: rgb(22, 22, 255);
   color: white;
 }
 
+/* Reset button - Grey color */
 #reset {
   background-color: rgb(121, 121, 121);
   color: white;
 }
 
+/* Style the list container where lap times will be displayed */
 ul {
   margin-top: 20px;
-  list-style: none;
+  list-style: none; /* Remove default bullet points */
 }
 
+/* Style individual lap time entries */
 ul li {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
   padding: 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded corners for lap items */
 }

@@ -4,30 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch Web App</title>
+
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Preconnecting to Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importing 'Poppins' font from Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Main container for the stopwatch -->
     <div class="container">
       <h1>Stopwatch</h1>
+
+      <!-- Stopwatch display section -->
       <div class="stopwatch">
+        <!-- Displaying hours, minutes, seconds, and milliseconds -->
         <span id="hours">00</span>:<span id="minutes">00</span>:<span
           id="seconds"
           >00</span
         >:<span id="milliseconds">00</span>
       </div>
+
+      <!-- Buttons for controlling the stopwatch -->
       <div class="buttons">
+        <!-- Start/Stop button -->
         <button id="startStop">Start</button>
+
+        <!-- Lap button to record lap times -->
         <button id="lap">Lap</button>
+
+        <!-- Reset button to clear the timer -->
         <button id="reset">Reset</button>
       </div>
+
+      <!-- Unordered list to display lap times -->
       <ul id="laps"></ul>
     </div>
+
+    <!-- Linking external JavaScript file for functionality -->
     <script src="./script.js"></script>
   </body>
 </html>

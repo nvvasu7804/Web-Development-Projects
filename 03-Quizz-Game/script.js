@@ -1,3 +1,4 @@
+// Array of quiz questions, each containing a question and multiple answer options
 const questions = [
   {
     question: "Who is the current Prime Minister of India (as of 2025)?",
@@ -176,9 +177,11 @@ const questions = [
   },
 ];
 
-let currentQuestionIndex = 0;
-let score = 0;
+// Variables to track quiz progress
+let currentQuestionIndex = 0; // Keeps track of the current question index
+let score = 0; // Stores the user's score
 
+// DOM elements
 const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -187,20 +190,29 @@ const resultContainer = document.getElementById("result-container");
 const scoreText = document.getElementById("score");
 const restartButton = document.getElementById("restart-btn");
 
+// Function to start the quiz
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
+  // Hides the result container at the start
   resultContainer.classList.add("hidden");
+  // Hides the 'Next' button initially
   nextButton.style.display = "none";
+  // Hides the 'Submit' button initially
   submitButton.style.display = "none";
+  // Displays the first question
   showQuestion();
 }
 
+// Function to display the current question
 function showQuestion() {
+  // Clears previous question data
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
+  // Sets question text
   questionText.textContent = currentQuestion.question;
 
+  // Creates answer buttons dynamically
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.textContent = answer.text;
@@ -214,49 +226,75 @@ function showQuestion() {
   submitButton.style.display = "block";
 }
 
+// Function to reset the answer buttons before showing a new question
 function resetState() {
   while (answerButtons.firstChild) {
+    // Clears previous answer buttons and hide the 'Next' button
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
 
+// Function to handle answer selection
 function selectAnswer(button, isCorrect) {
+  // Remove the 'selected' class from all option buttons
   document
     .querySelectorAll(".option-btn")
     .forEach((btn) => btn.classList.remove("selected"));
+
+  // Add the 'selected' class to the clicked button
   button.classList.add("selected");
+
+  // Store whether the selected answer is correct in the button's dataset
   button.dataset.correct = isCorrect;
 }
 
+// Event listener for the submit button
 submitButton.addEventListener("click", () => {
+  // Get the selected button
   const selectedButton = document.querySelector(".selected");
   if (selectedButton) {
+    // Check if the selected answer is correct
     if (selectedButton.dataset.correct === "true") {
-      score++;
+      score++; // Increase score if correct
     }
+
+    // Show the "Next" button and hide the "Submit" button after selection
     nextButton.style.display = "block";
     submitButton.style.display = "none";
   }
 });
 
+// Event listener for the next button
 nextButton.addEventListener("click", () => {
+  // Move to the next question
   currentQuestionIndex++;
+
+  // If there are more questions, show the next one
   if (currentQuestionIndex < questions.length) {
     showQuestion();
   } else {
+    // If no more questions, end the quiz
     endQuiz();
   }
 });
 
+// Function to handle quiz completion
 function endQuiz() {
+  // Reset UI for quiz completion
   resetState();
+
+  // Display final message and score
   questionText.textContent = "Quiz Completed!";
   resultContainer.classList.remove("hidden");
   scoreText.textContent = `${score} / ${questions.length}`;
+
+  // Hide the next and submit buttons
   nextButton.style.display = "none";
   submitButton.style.display = "none";
 }
 
+// Event listener for the restart button to restart the quiz
 restartButton.addEventListener("click", startQuiz);
 
+// Start the quiz when the script runs
 startQuiz();

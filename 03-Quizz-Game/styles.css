@@ -1,3 +1,4 @@
+/* Apply a global reset to remove default margin and padding */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Center the quiz container in the middle of the screen */
 body {
   display: flex;
   justify-content: center;
@@ -15,19 +17,22 @@ body {
   text-align: center;
 }
 
+/* Main container for the quiz */
 .quiz-container {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Dark background with some transparency */
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 40px 10px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  box-shadow: 0 40px 10px rgba(0, 0, 0, 0.3); /* Adds a slight shadow effect */
+  width: 400px; /* Fixed width for consistency */
 }
 
+/* Styling for the quiz title */
 h1 {
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
+/* Container for answer options */
 .options {
   display: flex;
   flex-direction: column;
@@ -35,6 +40,7 @@ h1 {
   margin: 20px 0;
 }
 
+/* General button styling */
 button {
   min-width: 80px;
   padding: 10px 15px;
@@ -42,35 +48,41 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s; /* Smooth transition effect */
 }
 
+/* Default styling for option buttons */
 .option-btn {
   background-color: white;
   color: black;
   border: 2px solid transparent;
 }
 
+/* Hover effect on option buttons */
 .option-btn:hover {
   background-color: hsl(20, 100%, 70%);
   color: white;
   border: 2px solid white;
 }
 
+/* Styling for a selected answer */
 .selected {
   background-color: hsl(0, 100%, 68%);
   color: white;
 }
 
+/* Class to hide elements dynamically */
 .hidden {
   display: none;
 }
 
+/* Controls section for navigation buttons */
 #controls {
   display: flex;
   justify-content: space-between;
 }
 
+/* Styling for control buttons (Next, Submit, Restart) */
 #next-btn,
 #submit-btn,
 #restart-btn {
@@ -78,12 +90,14 @@ button {
   color: white;
 }
 
+/* Hover effect for control buttons */
 #next-btn:hover,
 #submit-btn:hover,
 #restart-btn:hover {
   background-color: darkblue;
 }
 
+/* Result container (shown after quiz completion) */
 #result-container {
   margin-top: 20px;
 }

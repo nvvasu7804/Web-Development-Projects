@@ -9,7 +9,11 @@
       href="./assets/favicon.webp"
       type="image/x-icon"
     />
+
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts for Styling -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,14 +26,20 @@
     <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="/index.html"><img src="./assets/logo_img.png" alt="" /></a>
+          <a href="/index.html"
+            ><img src="./assets/logo_img.png" alt="Company Logo"
+          /></a>
         </div>
+
+        <!-- Navigation Links -->
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Hamburger Menu for Mobile Navigation -->
         <div class="hamburger">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -39,6 +49,7 @@
     </header>
 
     <!-- Main Section (Landing Page) -->
+    <!-- Landing Section -->
     <section id="home" class="landing-section">
       <div class="content">
         <h1>Welcome To,</h1>
@@ -57,6 +68,8 @@
           Our mission is to bridge the gap between education and real-world
           application.
         </p>
+
+        <!-- Vision and Mission Content -->
         <div class="about-content">
           <div class="about-item">
             <img
@@ -96,6 +109,8 @@
           We offer a range of services to meet the needs of web developers,
           businesses, and aspiring professionals:
         </p>
+
+        <!-- List of Services -->
         <div class="services-content">
           <div class="service-item">
             <img
@@ -148,6 +163,8 @@
           Get in touch with us to start your journey in web development. We're
           here to answer your questions!
         </p>
+
+        <!-- Contact Form -->
         <form action="#" method="POST" class="contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
@@ -165,11 +182,14 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <!-- Left Section: Branding -->
           <div class="footer-left">
             <h3>NextGen WebWorks</h3>
             <p>Empowering the next generation of web developers.</p>
             <p>&copy; 2025 NextGen WebWorks. All Rights Reserved.</p>
           </div>
+
+          <!-- Right Section: Social Media Links -->
           <div class="footer-right">
             <h4>Follow Us</h4>
             <ul class="social-media">
@@ -189,10 +209,13 @@
       </div>
     </footer>
 
+    <!-- JavaScript for Responsive Navigation -->
     <script>
+      // Select the hamburger menu and navigation links
       const hamburger = document.querySelector(".hamburger");
       const navLinks = document.querySelector(".nav-links");
 
+      // Toggle the navigation menu on click
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("open");
       });

@@ -4,33 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game Application</title>
+
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Preloading Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Importing Poppins font from Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Main container for the quiz game -->
     <div class="quiz-container">
       <h1>Quiz Game</h1>
+
+      <!-- Question container where questions and answer options will be displayed -->
       <div id="question-container">
+        <!-- Placeholder for the quiz question -->
         <p id="question-text"></p>
+
+        <!-- Answer options will be inserted dynamically here -->
         <div id="answer-buttons" class="options"></div>
       </div>
 
+      <!-- Navigation buttons for quiz progression -->
       <div id="controls">
+        <!-- Moves to the next question -->
         <button id="next-btn">Next</button>
+        <!-- Submits the final answers -->
         <button id="submit-btn">Submit</button>
       </div>
 
+      <!-- Result container (hidden initially) to show the final score -->
       <div id="result-container" class="hidden">
+        <!-- Displays final score -->
         <h2>Your Score: <span id="score">0</span></h2>
+        <!-- Restarts the quiz from the beginning -->
         <button id="restart-btn">Restart Quiz</button>
       </div>
     </div>
 
+    <!-- Linking external JavaScript file for quiz functionality -->
     <script src="./script.js"></script>
   </body>
 </html>
